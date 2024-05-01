@@ -1,9 +1,9 @@
 import { SiteHeader } from "@/components/layouts/site-header";
+import { ReactNode } from "react";
 
-interface AppLayoutProps
-  extends React.PropsWithChildren<{
-    modal: React.ReactNode;
-  }> {}
+interface AppLayoutProps {
+  children: Readonly<ReactNode>;
+}
 
 export default async function AppLayout({ children }: AppLayoutProps) {
   return (
