@@ -1,5 +1,6 @@
 import TodoList from "@/components/test";
 import { cookiesClient } from "@/lib/amplify";
+import { revalidatePath } from "next/cache";
 
 export default async function Home() {
   async function addTodo(data: FormData) {
@@ -9,6 +10,7 @@ export default async function Home() {
       content: title,
       isDone: false,
     });
+    revalidatePath("/");
   }
 
   return (
