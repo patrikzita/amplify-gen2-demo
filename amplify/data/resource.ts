@@ -18,15 +18,15 @@ const schema = a.schema({
       age: a.integer(),
       projects: a.hasMany("Project", "id"),
     })
-    .identifier(["id"])
     .authorization((allow) => [allow.guest()]),
   Project: a
     .model({
       id: a.id().required(),
       name: a.string(),
       description: a.string(),
+      employees: a.belongsTo("Employee", "id"),
     })
-    .identifier(["id"]),
+    .authorization((allow) => [allow.publicApiKey()]),
 });
 
 // Used for code completion / highlighting when making requests from frontend
