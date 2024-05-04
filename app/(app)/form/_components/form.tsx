@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { Schema } from "aws-amplify/datastore";
+import { type Schema } from "@/amplify/data/resource";
 
 const FormSchema = z.object({
   firstName: z.string().min(2, {
@@ -29,7 +29,13 @@ const FormSchema = z.object({
   age: z.number(),
 });
 
-export function ProfileForm() {
+type Project = Schema["Project"];
+
+type Props = {
+  projects?: Project[];
+};
+
+export function ProfileForm({ projects }: Props) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -42,6 +48,8 @@ export function ProfileForm() {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("Event has been there");
   }
+
+  console.log(projects);
 
   return (
     <Form {...form}>

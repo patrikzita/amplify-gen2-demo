@@ -5,6 +5,7 @@ import { getCurrentUser } from "aws-amplify/auth/server";
 
 import { type Schema } from "@/amplify/data/resource";
 import config from "@/amplifyconfiguration.json";
+import { generateClient } from "aws-amplify/data";
 
 export const { runWithAmplifyServerContext } = createServerRunner({
   config,
@@ -14,6 +15,8 @@ export const cookiesClient = generateServerClientUsingCookies<Schema>({
   config,
   cookies,
 });
+
+export const client = generateClient<Schema>();
 
 export async function AuthGetCurrentUserServer() {
   try {
