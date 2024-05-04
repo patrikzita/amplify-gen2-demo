@@ -11,20 +11,19 @@ const links = {
 };
 
 export const siteConfig = {
-  name: "Skateshop",
-  description:
-    "An open source e-commerce skateshop build with everything new in Next.js.",
+  name: "Qest - AWS Amplify",
+  description: "Demo pro ukázku AWS Amplify",
   url: "https://skateshop.sadmn.com",
   ogImage: "https://skateshop.sadmn.com/opengraph-image.png",
   links,
   mainNav: [
     {
-      title: "Lobby",
+      title: "Menu",
       items: [
         {
-          title: "Products",
-          href: "/products",
-          description: "All the products we have to offer.",
+          title: "Vytvoř qesťáka",
+          href: "/form",
+          description: "Zkus to i ty.",
           items: [],
         },
         {

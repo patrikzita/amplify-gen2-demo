@@ -14,7 +14,7 @@ const schema = a.schema({
       id: a.id().required(),
       firstName: a.string(),
       lastName: a.string(),
-      position: a.string(),
+      position: a.enum(["FRONTEND", "BACKEND", "FULLSTACK"]),
       age: a.integer(),
       projects: a.hasMany("Project", "id"),
     })
