@@ -7,9 +7,8 @@ export const UploadImage = () => {
   return (
     <StorageManager
       acceptedFileTypes={["image/*"]}
-      path="media/*"
+      path="image/"
       maxFileCount={1}
-      isResumable
     />
   );
 };

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-amplify/adapter-nextjs": "^1.1.4",
+    "@aws-amplify/ui-react": "^6.1.9",
     "@aws-amplify/ui-react-storage": "^3.1.0",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -25,7 +26,9 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.51.3",
+    "sharp": "^0.33.3",
     "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",

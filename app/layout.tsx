@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ConfigureAmplifyClientSide from "@/components/configure-amplify";
 import { Toaster } from "@/components/ui/sonner";
+import "@aws-amplify/ui-react/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
