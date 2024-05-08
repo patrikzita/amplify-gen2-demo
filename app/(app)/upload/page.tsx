@@ -1,12 +1,16 @@
-import { UploadImage } from "./_components/UploadImage";
 import UploadImageDropzone from "./_components/UploadImageDropzone";
+import StorageManager from "@/components/storage-manager";
 
 export default async function Page() {
   return (
     <main className="flex flex-col gap-y-10 p-24">
       <div>
         <h1 className="font-bold text-xl">Amplify component</h1>
-        <UploadImage />
+        <StorageManager
+          acceptedFileTypes={["image/*"]}
+          path="image/"
+          maxFileCount={1}
+        />
       </div>
       <div>
         <h1 className="font-bold text-xl">Custom React-dropzone</h1>
