@@ -48,8 +48,6 @@ const FileUploadDropzone = () => {
     toast.success("your message has been sent successfully");
   };
 
-  console.log(form.getValues("files"));
-
   return (
     <Form {...form}>
       <form

@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import UploadImageDropzone from "./_components/UploadImageDropzone";
 
 const StorageManager = dynamic(() => import("@/components/storage-manager"), {
   ssr: false,
@@ -16,10 +15,10 @@ export default async function Page() {
           maxFileCount={1}
         />
       </div>
-      <div>
+      {/*    <div>
         <h1 className="font-bold text-xl">Custom React-dropzone</h1>
         <UploadImageDropzone />
-      </div>
+      </div> */}
     </main>
   );
 }
