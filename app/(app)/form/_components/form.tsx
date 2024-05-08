@@ -29,7 +29,7 @@ const FormSchema = z.object({
   age: z.number(),
 });
 
-type Project = Schema["Project"];
+type Project = Schema["Project"]["type"];
 
 type Props = {
   projects?: Project[];

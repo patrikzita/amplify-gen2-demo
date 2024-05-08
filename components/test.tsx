@@ -7,7 +7,7 @@ import { generateClient } from "aws-amplify/data";
 const client = generateClient<Schema>();
 
 export default function TodoList() {
-  const [todos, setTodos] = useState<Schema["Todo"][]>([]);
+  const [todos, setTodos] = useState<Schema["Todo"]["type"][]>([]);
 
   useEffect(() => {
     const sub = client.models.Todo.observeQuery().subscribe({
