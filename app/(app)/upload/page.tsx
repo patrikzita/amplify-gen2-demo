@@ -1,5 +1,9 @@
+import dynamic from "next/dynamic";
 import UploadImageDropzone from "./_components/UploadImageDropzone";
-import StorageManager from "@/components/storage-manager";
+
+const StorageManager = dynamic(() => import("@/components/storage-manager"), {
+  ssr: false,
+});
 
 export default async function Page() {
   return (
