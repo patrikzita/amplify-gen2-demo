@@ -23,8 +23,8 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <div className="hidden gap-6 lg:flex ">
-      <Link href="/" className="hidden items-center space-x-2 lg:flex">
+    <div className="gap-6 flex">
+      <Link href="/" className="items-center space-x-2 flex">
         <Icons.logo className="size-10" aria-hidden="true" />
 
         <span className="sr-only">Home</span>

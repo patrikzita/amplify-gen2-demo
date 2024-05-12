@@ -20,15 +20,6 @@ const schema = a.schema({
       lastName: a.string(),
       position: a.enum(["FRONTEND", "BACKEND", "FULLSTACK"]),
       age: a.integer(),
-      projects: a.hasMany("Project", "id"),
-    })
-    .authorization((allow) => [allow.publicApiKey()]),
-  Project: a
-    .model({
-      id: a.id().required(),
-      name: a.string(),
-      description: a.string(),
-      employees: a.belongsTo("Employee", "id"),
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });

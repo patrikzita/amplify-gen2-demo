@@ -23,19 +23,21 @@ export const siteConfig = {
         {
           title: "Vytvoř qesťáka",
           href: "/form",
-          description: "Zkus to i ty.",
           items: [],
         },
         {
-          title: "Build a Board",
-          href: "/build-a-board",
-          description: "Build your own custom skateboard.",
+          title: "Upload do S3",
+          href: "/upload",
           items: [],
         },
         {
-          title: "Blog",
-          href: "/blog",
-          description: "Read our latest blog posts.",
+          title: "Login",
+          href: "/login",
+          items: [],
+        },
+        {
+          title: "Pub/sub",
+          href: "/qest-list",
           items: [],
         },
       ],

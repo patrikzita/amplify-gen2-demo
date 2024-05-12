@@ -1,17 +1,24 @@
 import { type Schema } from "@/amplify/data/resource";
-import config from "@/amplify_outputs.json";
-import { generateServerClientUsingCookies } from "@aws-amplify/adapter-nextjs/api";
+import outputs from "@/amplify_outputs.json";
+import { createServerRunner } from "@aws-amplify/adapter-nextjs";
+import {
+  generateServerClientUsingCookies,
+  generateServerClientUsingReqRes,
+} from "@aws-amplify/adapter-nextjs/api";
 import { getCurrentUser } from "aws-amplify/auth/server";
 import { cookies } from "next/headers";
-import { createServerRunner } from "@aws-amplify/adapter-nextjs";
 
 export const { runWithAmplifyServerContext } = createServerRunner({
-  config,
+  config: outputs,
 });
 
 export const cookiesClient = generateServerClientUsingCookies<Schema>({
-  config,
+  config: outputs,
   cookies,
+});
+
+export const reqResBasedClient = generateServerClientUsingReqRes<Schema>({
+  config: outputs,
 });
 
 export async function AuthGetCurrentUserServer() {
