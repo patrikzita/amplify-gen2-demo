@@ -40,6 +40,11 @@ export const siteConfig = {
           href: "/qest-list",
           items: [],
         },
+        {
+          title: "Streaming",
+          href: "/streaming",
+          items: [],
+        },
       ],
     },
   ] satisfies MainNavItem[],
